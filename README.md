@@ -3,7 +3,7 @@ zoompress
 
 zoompress is a CMS. 
 
-No frameword is used in this project. Only functional PHP. 
+No framework is used in this project. Only functional PHP. 
 
 MySQL used as DBMS here.
 
@@ -13,7 +13,7 @@ Like wordpress from menu to page content every single thing is dynamic and datab
 
 User CRUD and Page CRUD features are available in this project
 
-Pages can be categorized under different subjects
+Pages can be categorized under different subjects which also have visibility options to registered and non-registered users
 
 Pages can contain images, videos, animations, various kind of text formattings
 

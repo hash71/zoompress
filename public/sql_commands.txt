@@ -1,0 +1,52 @@
+CREATE DATABASE zoompress;
+
+
+
+CREATE TABLE subjects(
+
+	id INT(11) NOT NULL AUTO_INCREMENT,
+	menu_name VARCHAR(30) NOT NULL,
+	position INT(3) NOT NULL,
+	visible TINYINT(1) NOT NULL,
+	PRIMARY KEY (id)
+
+);
+
+INSERT INTO subjects (menu_name,position,visible) VALUES('menu_name1',1,1);
+INSERT INTO subjects (menu_name,position,visible) VALUES('menu_name2',2,1);
+INSERT INTO subjects (menu_name,position,visible) VALUES('menu_name3',3,1);
+INSERT INTO subjects (menu_name,position,visible) VALUES('menu_name4',4,0);
+
+
+CREATE TABLE pages(
+
+	id INT(11) NOT NULL AUTO_INCREMENT,
+	subject_id INT(11) NOT NULL,
+	menu_name VARCHAR(50) NOT NULL,
+	position INT(3) NOT NULL,
+	visible TINYINT(1) NOT NULL,
+	content TEXT,
+	PRIMARY KEY(id),
+	INDEX (subject_id)
+
+);
+
+
+INSERT INTO pages (subject_id,menu_name,position,visible,content) VALUES(1,'page11',1,1,'This is page11');
+INSERT INTO pages (subject_id,menu_name,position,visible,content) VALUES(1,'page12',2,1,'This is page12');
+INSERT INTO pages (subject_id,menu_name,position,visible,content) VALUES(2,'page21',1,1,'This is page21');
+INSERT INTO pages (subject_id,menu_name,position,visible,content) VALUES(2,'page22',2,1,'This is page22');
+INSERT INTO pages (subject_id,menu_name,position,visible,content) VALUES(3,'page31',1,1,'This is page31');
+INSERT INTO pages (subject_id,menu_name,position,visible,content) VALUES(3,'page32',2,1,'This is page32');
+
+
+
+CREATE TABLE admins(
+
+	id INT(11) NOT NULL AUTO_INCREMENT,
+	username VARCHAR(50) NOT NULL,
+	hashed_password VARCHAR(60) NOT NULL,
+	PRIMARY KEY(id)
+
+);
+
